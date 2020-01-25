@@ -20,6 +20,10 @@ function writePassword() {
 function generatePassword() {
   var passwordLength = prompt("Please enter the number of characters you want for you new password.  It must be more than 12 but less than 128.");
 
+  while (passwordLength < 12 || passwordLength > 128) {
+    plength = prompt("Length must be between 12-128 characters! Please refresh your page and try again!");
+  }
+
   var numbers = confirm("Do you want numbers in your password?");
 
   var lowerCases = confirm("Do you want lowercases in your password?");
